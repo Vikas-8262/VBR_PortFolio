@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 const Navbar = () => {
   return (
     <nav className="navbar glass-panel">

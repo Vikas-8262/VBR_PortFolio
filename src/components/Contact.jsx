@@ -37,7 +37,7 @@ const Contact = () => {
       } else {
         setStatus("Something went wrong!");
       }
-    } catch (error) {
+    } catch {
       setStatus("Error sending message.");
     }
   };

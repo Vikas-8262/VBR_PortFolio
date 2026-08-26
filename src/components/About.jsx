@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import AboutThreeModel from './AboutThreeModel';
 import TextDecode from './TextDecode';
