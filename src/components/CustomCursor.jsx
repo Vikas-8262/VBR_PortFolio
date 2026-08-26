@@ -9,6 +9,8 @@ const CustomCursor = () => {
   const springConfig = { damping: 25, stiffness: 400 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
+  const dotXSpring = useSpring(cursorX, { damping: 30, stiffness: 600 });
+  const dotYSpring = useSpring(cursorY, { damping: 30, stiffness: 600 });
 
   useEffect(() => {
     const moveCursor = (e) => {
@@ -78,8 +80,8 @@ const CustomCursor = () => {
           pointerEvents: 'none',
           zIndex: 9999,
           mixBlendMode: 'difference',
-          translateX: useSpring(useMotionValue(cursorX.get() + 14), { damping: 30, stiffness: 600 }), // Slightly faster inner dot
-          translateY: useSpring(useMotionValue(cursorY.get() + 14), { damping: 30, stiffness: 600 }),
+          translateX: dotXSpring,
+          translateY: dotYSpring,
         }}
         animate={{
           scale: isHovering ? 0 : 1,
